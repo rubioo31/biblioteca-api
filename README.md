@@ -33,7 +33,7 @@ Accede a: `http://localhost/biblioteca-api/index.php`
 >- La API valida que existan los registros referenciados (usuarios y libros) antes de crear un préstamo.
 
 > [!IMPORTANT]
->- Asegúrate de que tu servidor esté corriendo y que la ruta base esté correctamente configurada.
+>- Asegúrate de que los servidores esten activos y que la ruta base esté correctamente configurada.
 
 ## Endpoints Disponibles
 
@@ -65,7 +65,7 @@ Accede a: `http://localhost/biblioteca-api/index.php`
   }
   ```
 
-- **DELETE /usuarios/{id}**: Eliminar un usuario.
+- **DELETE /usuarios/{id}**: Eliminar un usuario.  
   **Ejemplo:** `http://localhost/biblioteca-api/api.php/usuarios/1`
 
 ### Libros
@@ -94,7 +94,7 @@ Accede a: `http://localhost/biblioteca-api/index.php`
   }
   ```
 
-- **DELETE /libros/{id}**: Eliminar un libro.
+- **DELETE /libros/{id}**: Eliminar un libro.  
   **Ejemplo:** `http://localhost/biblioteca-api/api.php/libros/2`
 
 ### Préstamos
@@ -123,6 +123,6 @@ Accede a: `http://localhost/biblioteca-api/index.php`
   }
   ```
 
-- **DELETE /prestamos/{id}**: Eliminar un préstamo.
+- **DELETE /prestamos/{id}**: Eliminar un préstamo.  
   **Ejemplo:** `http://localhost/biblioteca-api/api.php/prestamos/3`
 
