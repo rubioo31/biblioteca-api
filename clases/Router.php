@@ -18,8 +18,8 @@ class Router {
 /*         // Para depurar:
         header('Content-Type: text/plain');
         print_r($uriParts); */
-        $this->resource = $uriParts[4] ?? null;
-        $this->id = $uriParts[5] ?? null;
+        $this->resource = $uriParts[3] ?? null;
+        $this->id = $uriParts[4] ?? null;
     }
 
     public function run() {
