@@ -24,6 +24,9 @@ La estructura del proyecto es la siguiente:
 │   ├── api.php              # Front controller que enruta todas las peticiones
 │   └── index.hmtl           # Interfaz web interactiva para probar la API
 ```
+> [!IMPORTANT]
+>- Ejecutar el SQL en tu base de datos para que la aplicacion funcione
+
 > [!NOTE]
 >- Puedes probarlo directamente desde el index.php como te comento aqui abajo, o seguir bajando y encontrar las URL's para usar alguna aplicacion externa (esta todo bien explicado).
 
