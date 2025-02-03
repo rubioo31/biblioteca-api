@@ -1,39 +1,49 @@
 # API de Gestión de Préstamos de Libros
 
-Esta API permite gestionar los recursos de una biblioteca: **usuarios**, **libros** y **prestamos**. Está desarrollada en PHP utilizando PDO para la conexión a MySQL, sin emplear frameworks, y se organiza en clases distribuidas en diferentes archivos para facilitar el mantenimiento y la escalabilidad.
+Esta API permite gestionar los recursos de una biblioteca: **usuarios**, **libros** y **prestamos**. Está desarrollada en PHP utilizando PDO para la conexión a MySQL, sin emplear frameworks, y se organiza en diferentes clases y archivos para facilitar el mantenimiento y la escalabilidad.
 
 ## Estructura del Proyecto
 
 La estructura del proyecto es la siguiente:
 ```
 /biblioteca-api
-│   ├── api.php              # Front controller que enruta todas las peticiones
-│   ├── index.php            # Interfaz web interactiva para probar la API
-│   ├── README.md            # Este archivo
+│   ├── clases
+│   |   ├── Database.php     # Clase para la conexión con la base de datos
+│   |   ├── Usuario.php      # CRUD para la tabla "usuarios"
+│   |   ├── Libro.php        # CRUD para la tabla "libros"
+│   |   ├── Prestamo.php     # Operaciones permitidas para la tabla "prestamos"
+│   |   └── Router.php       # Clase que interpreta la URL y redirige a la clase correspondiente
 │   ├── config
 │   │   └── database.php     # Configuración de la conexión a la base de datos
-│   └── clases
-│       ├── Database.php     # Clase para la conexión con la base de datos
-│       ├── Usuario.php      # CRUD para la tabla "usuarios"
-│       ├── Libro.php        # CRUD para la tabla "libros"
-│       ├── Prestamo.php     # Operaciones permitidas para la tabla "prestamos"
-│       └── Router.php       # Clase que interpreta la URL y redirige a la clase correspondiente
+|   ├── database
+|   |   └── dbBlibioteca.sql # Codigo SQL para la generacion de la base de datos
+|   ├── utils
+|   |   ├── script.js        # Script para la automatizacion del uso de la API
+|   |   └── styles.css       # Estilos basicos para el index.php
+│   ├── README.md            # Este archivo
+│   ├── api.php              # Front controller que enruta todas las peticiones
+│   └── index.hmtl           # Interfaz web interactiva para probar la API
 ```
+> [!NOTE]
+>- Puedes probarlo directamente desde el index.php como te comento aqui abajo, o seguir bajando y encontrar las URL's para usar alguna aplicacion externa (esta todo bien explicado).
 
-## Interfaz de Prueba (index.php)
+## Interfaz de Prueba (index.html)
 
-El archivo `index.php` ofrece una interfaz web para probar todas las funcionalidades de la API.
+El archivo `index.html` ofrece una interfaz web para probar todas las funcionalidades de la API.
+> [!TIP]
+>- Para que el enrutado funcione correctamente, si quieres usar XAMPP tienes que meterlo directamente en el directorio `/htdocs`.  
+Si lo metes en otro lado, tendras que modificar el archivo `clases/Router.php` las lineas `21 & 22` y aumetar o disminuir el inidice dependiendo si metes mas directorios por medio o no. 
 
-Accede a: `http://localhost/biblioteca-api/index.php`
+Accede a: `http://localhost/biblioteca-api/index.html` o en el dominio que lo quieras probar `http://tu-dominio/biblioteca-api/index.html`
+
+> [!IMPORTANT]
+>- La API valida que existan los registros referenciados (usuarios y libros) antes de crear un préstamo.
+
+> [!WARNING]
+>- Asegúrate de que los servidores esten activos y que la ruta base esté correctamente configurada.
 
 > [!CAUTION]
 >- No incluyas la carpeta `clases` en la URL.
-
-> [!NOTE]
->- La API valida que existan los registros referenciados (usuarios y libros) antes de crear un préstamo.
-
-> [!IMPORTANT]
->- Asegúrate de que los servidores esten activos y que la ruta base esté correctamente configurada.
 
 ## Endpoints Disponibles
 
