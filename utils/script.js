@@ -1,4 +1,4 @@
-const apiBase = "http://localhost/alejandro/biblioteca-api/api.php";
+const apiBase = "http://localhost/biblioteca-api/api.php";
 
         // Funciones Usuarios
         function getUsuarios() {
