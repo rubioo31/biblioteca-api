@@ -29,7 +29,8 @@ La estructura del proyecto es la siguiente:
 
 ## Interfaz de Prueba (index.html)
 
-El archivo `index.html` ofrece una interfaz web para probar todas las funcionalidades de la API.  
+El archivo `index.html` ofrece una interfaz web para probar todas las funcionalidades de la API. 
+ 
 Accede a: `http://localhost/biblioteca-api/index.html` o en el dominio que lo quieras probar `http://tu-dominio/biblioteca-api/index.html`
 
 > [!TIP]
