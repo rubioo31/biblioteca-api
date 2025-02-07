@@ -7,22 +7,22 @@ Esta API permite gestionar los recursos de una biblioteca: **usuarios**, **libro
 La estructura del proyecto es la siguiente:
 ```
 /biblioteca-api
-│   ├── clases
-│   |   ├── Database.php     # Clase para la conexión con la base de datos
-│   |   ├── Usuario.php      # CRUD para la tabla "usuarios"
-│   |   ├── Libro.php        # CRUD para la tabla "libros"
-│   |   ├── Prestamo.php     # Operaciones permitidas para la tabla "prestamos"
-│   |   └── Router.php       # Clase que interpreta la URL y redirige a la clase correspondiente
-│   ├── config
-│   │   └── database.php     # Configuración de la conexión a la base de datos
-|   ├── database
-|   |   └── dbBlibioteca.sql # Codigo SQL para la generacion de la base de datos
-|   ├── utils
-|   |   ├── script.js        # Script para la automatizacion del uso de la API
-|   |   └── styles.css       # Estilos basicos para el index.php
-│   ├── README.md            # Este archivo
-│   ├── api.php              # Front controller que enruta todas las peticiones
-│   └── index.hmtl           # Interfaz web interactiva para probar la API
+├── clases
+|   ├── Database.php     # Clase para la conexión con la base de datos
+|   ├── Usuario.php      # CRUD para la tabla "usuarios"
+|   ├── Libro.php        # CRUD para la tabla "libros"
+|   ├── Prestamo.php     # Operaciones permitidas para la tabla "prestamos"
+|   └── Router.php       # Clase que interpreta la URL y redirige a la clase correspondiente
+├── config
+│   └── database.php     # Configuración de la conexión a la base de datos
+├── database
+|   └── dbBlibioteca.sql # Codigo SQL para la generacion de la base de datos
+├── utils
+|   ├── script.js        # Script para la automatizacion del uso de la API
+|   └── styles.css       # Estilos basicos para el index.php
+├── README.md            # Este archivo
+├── api.php              # Front controller que enruta todas las peticiones
+└── index.hmtl           # Interfaz web interactiva para probar la API
 ```
 > [!CAUTION]
 >- Ejecutar el SQL en tu base de datos para que la aplicacion funcione
